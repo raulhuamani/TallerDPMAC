@@ -7,19 +7,29 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.rhuamani.tallerdpmac.ui.home.BasicosFragment"
+        android:name="com.rhuamani.tallerdpmac.ui.basicos.BasicosFragment"
         android:label="@string/menu_basicos"
         tools:layout="@layout/fragment_basicos" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.rhuamani.tallerdpmac.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_cocteles"
+        android:name="com.rhuamani.tallerdpmac.ui.cocteles.CoctelesFragment"
+        android:label="Cocteles"
+        tools:layout="@layout/fragment_cocteles" >
+        <action
+            android:id="@+id/action_nav_cocteles_to_newCoctelFragment"
+            app:destination="@id/newCoctelFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_slideshow"
         android:name="com.rhuamani.tallerdpmac.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/newCoctelFragment"
+        android:name="com.rhuamani.tallerdpmac.ui.cocteles.NewCoctelFragment"
+        android:label="fragment_new_coctel"
+        tools:layout="@layout/fragment_new_coctel" />
+
 </navigation>
